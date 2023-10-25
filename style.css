@@ -2,3 +2,26 @@
 
     
 }
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Tworzy 3 kolumny o szerokości 100px każda */
+    grid-template-rows: repeat(3, 100px); /* Tworzy 3 wiersze o wysokości 100px każdy */
+    gap: 10px; /* Odległość między komórkami siatki */
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: #e0e0e0;
+}
