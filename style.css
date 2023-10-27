@@ -18,10 +18,3 @@ body {
     gap: 10px; /* Odległość między komórkami siatki */
 }
 
-.grid-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    background-color: #e0e0e0;
-}
