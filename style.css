@@ -17,5 +17,8 @@ body {
     grid-template-rows: repeat(3, 100px); /* Tworzy 3 wiersze o wysokości 100px każdy */
     gap: 10px; /* Odległość między komórkami siatki */
 }
-
+.grid-item{
+    background-color: green;
+    
+}
 asd
