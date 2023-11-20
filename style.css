@@ -7,14 +7,31 @@ body {
     height: 100vh;
     background-color: white;
     display: flex;
+
     align-items: center;
     justify-content: center;
     font-family: Arial, sans-serif;
 }
 
-.grid-container {
+.grid-container>.cell-container {
     display: grid;
+    
+    justify-content: center;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px); 
     gap: 10px;
+}
+.grid-container > .cell-container>button{
+    cursor: pointer;
+    display: block;
+    background-color: aqua;
+}
+.grid-container > .cell-container>button:hover{
+    background-color: white;
+}
+.grid-container > .clear{
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    background-color: aqua;
 }
