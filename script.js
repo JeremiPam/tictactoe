@@ -1,5 +1,6 @@
 
 const cells=document.querySelectorAll('[cell]')
+const clear=document.querySelector('#clear')
 let winner=document.querySelector('#winner')
 let currentPlayer='X';
 let places=['','','','','','','','',''];
@@ -17,8 +18,17 @@ function initializeGame(){
     cells.forEach(cell => {
         cell.addEventListener('click',cellClicked);
     });
-    
+    clear.addEventListener('click',resetGame);
 }
+
+function resetGame(){
+    places=['','','','','','','','',''];
+    currentPlayer='X';
+    cells.forEach(cell => {
+        cell.textContent='';
+    });
+}
+
 function cellClicked(){
     const cellIndex=this.getAttribute('cell-index');
 
@@ -44,10 +54,5 @@ function checkWinner(index){
 
     const row=index/3;
     const column=index%3;
-
-    if(places[row])
-    if(a!='' && b!='' && c!='' && a==b && b==c){
-        winner.textContent=`${currentPlayer} wins!`
-         gameRunning=false;
-    }
+    
 }
